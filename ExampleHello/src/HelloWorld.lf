@@ -1,0 +1,12 @@
+target C
+
+/**
+ * Print "Hello World!" in C.
+ */
+main reactor {
+    timer t(0, 1 sec)
+    reaction(t) {=
+        // Using a thread-safe print function provided by the runtime.
+        info_print("Hello World!");
+    =}
+}
